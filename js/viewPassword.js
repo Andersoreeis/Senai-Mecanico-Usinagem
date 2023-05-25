@@ -8,4 +8,6 @@
         togglePassword.classList.toggle('fa-eye');
         togglePassword.classList.toggle('fa-eye-slash');
     });
+    
+    
 }

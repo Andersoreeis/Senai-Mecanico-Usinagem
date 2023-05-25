@@ -1,0 +1,62 @@
+:root {
+    --primary-color: #EC1C24;
+    --secondary-color: #808080;
+    --terciary-color: #FFFFFF;
+    --quartary-color: #F16C71;
+    --black-color: rgba(0, 0, 0, 0.466);
+    --gray-transparent-color: #444;
+}
+.container-recover{
+    width: 400px;
+    height: 300px;
+    background-color: var(--terciary-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.email-recover{
+    outline: none;
+    border: none;
+    border-bottom:0.5px solid var(--secondary-color);
+    width: 300px;
+    height: 33px;
+}
+
+.btns-recover{
+    display: flex;
+    gap: 10px;
+    width: 100px;
+}
+
+.cancel-recover{
+    width: 112px;
+    height: 34px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.cancel-recover > a{
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+
+.submit-recover{
+    width: 112px;
+    height: 34px;
+    background-color: var(--quartary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.submit-recover > a{
+    text-decoration: none;
+    color: var(--terciary-color);
+}
