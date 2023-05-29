@@ -51,6 +51,15 @@
     border-radius: 10px;
     font-size: 2.5rem;
     text-align: center;
+    outline: none;
+    border: 1px solid var(--secondary-color);
+
+}
+.error-inputs{
+    border: none;
+border: 1px solid var(--primary-color);
+outline: none;
+
 }
 
 .input-code[type="number"]::-webkit-inner-spin-button,

@@ -1,0 +1,142 @@
+:root {
+    --primary-color: #EC1C24;
+    --secondary-color: #808080;
+    --terciary-color: #FFFFFF;
+    --quartary-color: #F16C71;
+    --black-color: rgba(0, 0, 0, 0.466);
+    --gray-transparent-color: #444;
+    --fifth-color: #4F4F4F;
+}
+
+.container-p-main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.container-p{
+    width: 500px;
+    height: 250px;
+    background-color: var(--terciary-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    padding-top: 10px;
+}
+
+.text-aling{
+    width: 406px;
+    height: 33px;
+    text-align: inherit;
+    
+}
+
+.text-p{
+    color: var(--fifth-color);
+    font-size: 0.8rem;
+    padding-left: 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 19px;
+    width: 100%;
+}
+
+.input{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-password-new{
+    width: 333px;
+    height: 44px;
+    border-radius: 10px;
+    border: 1px solid #DDDFE2;
+    padding-left: 10px;
+}
+
+.new-password{
+    position: absolute;
+    left: 90%;
+    cursor: pointer;
+    color: var(--secondary-color);
+}
+
+.btn-password{
+ 
+    display: flex;
+    gap: 50px;
+}
+
+.btn-cancelar{
+    width: 112px;
+    height: 34px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    border: none;
+    color: var(--terciary-color);
+    cursor: pointer;
+}
+
+.cancel-password{
+    width: 112px;
+    height: 34px;
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+
+
+.btn-alterar{
+    width: 112px;
+    height: 34px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--quartary-color);
+    color: var(--terciary-color);
+    cursor: pointer;
+}
+
+.submit-password{
+    width: 112px;
+    height: 34px;
+    background-color: var(--quartary-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--terciary-color);
+}
+
+@media screen and (max-width:500px){
+    .container-p{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .btn-password{
+        
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-aling{
+        width: 343px;
+    }
+
+    .text-p{
+        padding-left: 0px;
+    }
+
+}
