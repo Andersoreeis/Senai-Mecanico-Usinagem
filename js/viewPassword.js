@@ -1,5 +1,5 @@
  export function renderTogglePassword() {
-    const passwordInput = document.getElementById('password-input');
+    const passwordInput = document.getElementById('password-input-aluno');
     const togglePassword = document.getElementById('toggle-password');
 
     togglePassword.addEventListener('click', function () {
