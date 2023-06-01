@@ -1,15 +1,17 @@
 import { renderTogglePassword, renderTogglePasswordChangePassword } from './viewPassword.js';
 import { renderInputCode } from './code.js';
-
-
+import { renderInputCodeAluno } from './codeAluno.js';
 
 
 const routes = {
   '/pageLoginProfessor': '../pageLogin/loginProfessor.html',
   '/pageLoginAluno': '../pageLogin/loginAluno.html',
   '/recover': '../pageLogin/recover.html',
+  '/recoverAluno': '../pageLogin/recoverAluno.html',
+  '/submite-code-Aluno': '../pageLogin/codeAluno.html',
   '/submite-code': '../pageLogin/code.html',
-  '/changeP': '../pageLogin/newP.html'
+  '/changeP': '../pageLogin/newP.html',
+  '/changeAluno': '../pageLogin/newAluno.html'
 };
 
  export const route = async () => {
@@ -42,30 +44,22 @@ const routes = {
 
   if (path === '/pageLoginProfessor') {
     renderTogglePassword();
-   
-   
   }
   
   if (path === '/pageLoginAluno') {
     renderTogglePassword();
-  
-    
   }
 
   if (path === '/submite-code') {
     renderInputCode();
-  
   }
+  
 
 
   if (path === '/changeP') {
     renderTogglePasswordChangePassword();
-    renderRedirection(title_studant, title_professor);  }
-  
-  
-
-  
-
+    renderRedirection(title_studant, title_professor);
+  }  
 };
 
 document.addEventListener('click', (event) => {
