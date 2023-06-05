@@ -2,13 +2,24 @@ import {
   renderTogglePassword,
   renderTogglePasswordChangePassword
 } from './viewPassword.js';
+
 import {
   renderInputCode
 } from './code.js';
 
 import {
-  renderValidation
+  renderInputCodeAluno
+} from './codeAluno.js';
+
+
+import {
+  renderValidationStudant
 } from './loginAluno.js';
+
+import {
+  renderValidationProfessor
+} from './loginProfessor.js';
+
 
 
 const routes = {
@@ -32,26 +43,31 @@ export const route = async () => {
   const response = await fetch(routes[path]);
   const html = await response.text();
   document.getElementById('root').innerHTML = html;
-  
+
   if (path === '/pageLoginProfessor') {
-    renderTogglePassword();
+    renderTogglePasswordChangePassword();
+    await renderValidationProfessor()
   }
 
   if (path === '/pageLoginAluno') {
     renderTogglePassword();
-    await renderValidation()
+    await renderValidationStudant()
   }
 
   if (path === '/submite-code') {
     renderInputCode();
   }
- 
+  if (path === '/submite-code-Aluno') {
+    renderInputCodeAluno()
+  }
 
 
+  if (path === '/changeAluno') {
+    renderTogglePassword();
+  }
 
   if (path === '/changeP') {
     renderTogglePasswordChangePassword();
-    renderRedirection(title_studant, title_professor);
   }
 };
 

@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+   
+
+}
+:root {
+    --primary-color: #EC1C24;
+    --secondary-color: #808080;
+    --terciary-color: #FFFFFF;
+    --quartary-color: #F16C71;
+    --gray-black: #4F4F4F;
+    --black-color: #000;
+    --gray-transparent-color: #444;
+    --blue-color:#4473B3;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+   align-items: center;
+    font-family: 'Inter', sans-serif;
+    flex-direction: column;
+   
+}
+.header-atividades{
+    
+    width: 100%;
+    
+    
+
+}
+.header-atividades > a > i{
+    margin: 20px;
+    color: var(--gray-black);
+    font-size: 1.5rem;
+}
+
+.main-all-activities{
+    width: 70%;
+    height: 70%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    
+  
+}
+.activities{
+    width: 100%;
+    height: 100px;
+    background-color:var(--blue-color);
+    filter: drop-shadow(1px 1px 10px var(--gray-transparent-color));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+
+   
+}
+.text-activities{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--terciary-color);
+
+   
+   
+}
+.title-activities{
+    font-size: 1.7rem;
+
+}
+.critério{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--terciary-color);
+margin: 10px;
+}
+@media  screen and  (max-width:500px) {
+    .header-atividades > a > i{
+        margin: 20px;
+        color: var(--gray-black);
+        font-size: 1.5rem;
+    }
+}

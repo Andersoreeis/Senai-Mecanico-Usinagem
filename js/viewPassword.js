@@ -13,8 +13,8 @@
 }
 
 export function renderTogglePasswordChangePassword() {
-    const passwordInput = document.getElementById('password-new');
-    const togglePassword = document.getElementById('new-password');
+    const passwordInput = document.getElementById('password-input-professor');
+    const togglePassword = document.getElementById('toggle-password');
 
     togglePassword.addEventListener('click', function () {
         const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';

@@ -4,8 +4,14 @@ const fetchData = async (url) => {
     return data;
   };
   
-  export const verification = async (matricula, senha) => {
-    const url = `https://mecanica-api.cyclic.app/v1/senai/alunos?matricula=${matricula}&senha=${senha}`;
+  export const verificationStundant = async (email, senha) => {
+    const url = `https://mecanica-api.cyclic.app/v1/senai/alunos?matricula=${email}&senha=${senha}`;
     return fetchData(url);
   };
-console.log(verification('1157661', 'claudio1234'));
+
+  export const verificationProfessor = async (email, senha) => {
+    const url = `https://mecanica-api.cyclic.app/v1/senai/professores?email=${email}&senha=${senha}`;
+    return fetchData(url);
+  };
+
+
