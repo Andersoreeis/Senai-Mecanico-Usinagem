@@ -6,12 +6,20 @@ function isInputEmpty(inputElement) {
   return inputElement.value.trim() === '';
 }
 
+
+
 export async function renderValidationStudant() {
   const btnEnterAluno = document.getElementById('btn-enter-aluno');
   const emailInput = document.getElementById('email-input-aluno');
   const passwordInput = document.getElementById('password-input-aluno');
 
   btnEnterAluno.addEventListener('click', async function() {
+    if(emailInput.value.includes("'") || passwordInput.value.incluedes("'")){
+      emailInput.value = emailInput.value.replace(/'/g, "");
+      passwordInput.value = passwordInput.value.replace(/'/g, "");
+      console.log('aspas removida')
+
+    }
     if (isInputEmpty(emailInput) || isInputEmpty(passwordInput)) {
       console.log('Por favor, preencha todos os campos.');
       emailInput.classList.add('input-error')
