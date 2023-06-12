@@ -21,7 +21,7 @@ body{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     font-family: 'Inter', sans-serif;
 }
 
@@ -33,13 +33,15 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    position: relative;
+    top: 230px;
     font-size: 3.5rem;
     color: var(--secondary-color);
 }
 
 .container{
     width: 100%;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -58,17 +60,27 @@ body{
     background-color: var(--terciary-color);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
-    box-shadow: 0px 4px 4px 4px rgba(241, 108, 113, 0.25);
+    box-shadow: 0px 4px 4px 4px rgba(209, 207, 207, 0.814);
     gap: 23px;
+    transition: 0.2s;
+
 }
 
 .atividade a {
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 23px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.atividade:hover{
+    transform: scale(1.05);
 }
 
 .atividade p {
@@ -85,17 +97,27 @@ body{
     background-color: var(--terciary-color);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
-    box-shadow: 0px 4px 4px 4px rgba(241, 108, 113, 0.25);
+    box-shadow: 0px 4px 4px 4px rgba(209, 207, 207, 0.814);
     gap: 23px;
+    transition: 0.2s;
+
 }
 
 .alunos a {
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 23px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.alunos:hover {
+    transform: scale(1.05);
 }
 
 .alunos p {
@@ -112,17 +134,26 @@ body{
     background-color: var(--terciary-color);
     border-radius: 20px;
     filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
-    box-shadow: 0px 4px 4px 4px rgba(241, 108, 113, 0.25);
+    box-shadow: 0px 4px 4px 4px rgba(209, 207, 207, 0.814);
     gap: 23px;
+    transition: 0.2s;
 }
 
 .notas a {
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 23px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.notas:hover{
+    transform: scale(1.05);
 }
 
 .notas p {
@@ -155,6 +186,5 @@ body{
     .container{
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
     }
 }

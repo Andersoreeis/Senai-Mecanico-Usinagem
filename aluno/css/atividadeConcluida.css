@@ -42,7 +42,7 @@ a{
 .activities{
     width:40%;
     height: 60px;
-    background-color: var(--blue-color);
+    background-color: var(--secondary-color);
     padding: 20px;
     border-radius: 5px;
     display: flex;

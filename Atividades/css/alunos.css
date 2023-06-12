@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #EC1C24;
+    --secondary-color: #808080;
+    --terciary-color: #FFFFFF;
+    --quartary-color: #F16C71;
+    --gray-black: #4F4F4F;
+    --black-color: #000;
+    --gray-transparent-color: #444;
+    --default-color: #1967D2;
+    --purple-color: #9853CF;
+    --green-color: #23C088;
+    --card-aluno-color: #D13C42;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    gap: 35px;
+}
+
+.header p {
+    font-size: 2.125rem;
+    font-weight: 600;
+    font-family: 'Inter';
+}
+
+.input-pesquisar-aluno{
+    outline: none;
+    border: none;
+    width: 65%;
+    height: 51px;
+    border-radius: 10px;
+    font-size: 1.125rem;
+    padding-left: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header i {
+    position: absolute;
+    top: 31.55%;
+    left: 80.22%;
+    font-size: 1.25rem;
+    color: var(--gray-black);
+}
+
+
+.container-alunos{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+    position: relative;
+    top: 20%;
+}
+
+.alunos{
+    width: 307px;
+    height: 189px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--card-aluno-color);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.alunos i {
+    font-size: 4.25rem;
+    position: relative;
+    bottom: 5.75%;
+    color: #FFFFFF;
+}
+
+.privacidade{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: start;
+}
+
+.privacidade p {
+    color: #FFFFFF;
+}
+
+.back-turmas{
+    display: none;
+}
+
+@media screen and (max-width:500px){
+
+    .input-pesquisar-aluno{
+        width: 85%;
+    }
+
+    .container-alunos{
+        display: flex;
+        flex-direction: column;
+        padding-left: 99px;
+        position: relative;
+        left: -17%;
+        top: 100px;
+    }
+
+    .back-turmas{
+        width: 21px;
+        display: flex;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        text-decoration: none;
+    }
+}

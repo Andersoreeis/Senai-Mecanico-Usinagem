@@ -98,7 +98,7 @@ main{
     text-decoration: none;
     color: var(--gray-transparent-color);
     cursor: pointer;
-    transition: .5;
+    transition: 0.6s;
 }
 
 .card-funcao > a:hover{

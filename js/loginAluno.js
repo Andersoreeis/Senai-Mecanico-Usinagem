@@ -24,11 +24,9 @@ export async function renderValidationStudant() {
 
     const validate = await verificationStundant(email, password);
 
-    if (validate && validate.alunos && Array.isArray(validate.alunos)) {
+    if (validate && validate.aluno && Array.isArray(validate.aluno)) {
       let isAuthenticated = false;
-     
-
-      validate.alunos.forEach(getAlunos => {
+      validate.aluno.forEach(getAlunos => {
         localStorage.setItem('nomeAluno', getAlunos.nome)
         console.log( localStorage.getItem('nomeALuno'));
         if (getAlunos.email === email && getAlunos.senha_email === password) {

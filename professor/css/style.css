@@ -17,9 +17,6 @@
 
 body{
     background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Inter', sans-serif;
 }
 
@@ -65,8 +62,9 @@ main{
 }
 
 .title{
-    padding-top: 150px;
-    font-size: 2.25rem;
+    padding-top: 180px;
+    font-size: 2.9rem;
+    font-weight: bold;
     color: var(--secondary-color);
 }
 
@@ -75,8 +73,8 @@ main{
     height: 211px;
     background-color: var(--terciary-color);
     border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px var(--quartary-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 4px 4px 4px rgba(209, 207, 207, 0.814);
 }
 
 .all-completed{
@@ -84,26 +82,29 @@ main{
     height: 211px;
     background-color: var(--terciary-color);
     border-radius: 20px;
-    box-shadow: 0px 4px 4px 0px var(--quartary-color);;
     filter: drop-shadow(0px 4px 0px rgba(0, 0, 0, 0.25));
+    box-shadow: 0px 4px 4px 4px rgba(209, 207, 207, 0.814);
 }
-
+.card-funcao{
+    transition: 0.2s;
+}
 .card-funcao > a{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-radius: 20px;
     gap: 27px;
     width: 100%;
     height: 100%;
     text-decoration: none;
     color: var(--gray-transparent-color);
     cursor: pointer;
-    transition: .5;
+    transition: 0.3s;
 }
 
-.card-funcao > a:hover{
-    transform: scale(1.1);
+.card-funcao:hover{
+    transform: scale(1.05);
 }
 
 .card{
@@ -111,7 +112,7 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 60px;
     gap: 60px;
 }
 
@@ -128,6 +129,8 @@ main{
 
     .title{
         padding-top: 30px;
+        font-size: 1.9rem;
+
     }
 
     .card{
