@@ -9,11 +9,15 @@ const fetchData = async (url) => {
     return fetchData(url);
   };
 
-  console.log(verificationStundant('lohan@gmail.com','vsfdesseprojeto'));
-
   export const verificationProfessor = async (email, senha) => {
     const url = `https://mecanica-api.cyclic.app/v1/senai/professores?email=${email}&senha=${senha}`;
     return fetchData(url);
   };
+  
+  export const getClass = async (periodo) => {
+    const url = `https://mecanica-api.cyclic.app/v1/senai/turmas?${periodo}`;
+    return fetchData(url);
+  };
+
 
 
