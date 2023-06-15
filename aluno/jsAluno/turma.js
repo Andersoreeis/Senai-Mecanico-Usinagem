@@ -2,6 +2,7 @@
 
 import { getClass } from '../../js/api.js';
 
+
 const getPeriodo = localStorage.getItem('periodo');
 
 (async function () {
@@ -16,7 +17,16 @@ const getPeriodo = localStorage.getItem('periodo');
 
         const imgClassSemestre = document.createElement('img');
         let semestre = turma.semestre.split("_")[0];
+
         console.log(semestre);
+
+        localStorage.setItem('class', turma.sigla)
+        localStorage.setItem('semestre', turma.semestre)
+
+
+        console.log(localStorage.getItem('semestre') );
+        console.log(localStorage.getItem('class') );
+
 
         if (semestre == "1") {
             imgClassSemestre.setAttribute('src', '/image/rodaAzul.png')

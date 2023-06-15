@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/alunos.css">
     <script src="../js/aluno.js" defer type="module"></script>
+    <script src="../jsAluno/turma.js" type="module" defer></script>
+    <script src="/js/api.js" type="module" defer></script>
     <title>Senai Mecanico de Usinagem</title>
 </head>
 <body>
@@ -20,60 +22,22 @@
     </a>
     
     <div class="header">
-        <input type="text" class="input-pesquisar-aluno" placeholder="Pesquise por nome" id="myInput">
-        <i class="fas fa-search"></i>
+        <input type="text" class="input-pesquisar-aluno" placeholder="Pesquise por nome" id="searchStudentsInput">
+        <i class="fas fa-search icon-search" id="click-search"></i>
     </div>
 
-    <main class="container-alunos">
-         <div class="alunos">
+    <main class="container-alunos" id="container-alunos">
+         <!-- <div class="alunos">
             <i class="fas fa-user-circle"></i>
             <div class="privacidade">
                 <p class="name">Henrique Juliano de Souza</p>
                 <p class="email">Email: henrique@senai.com</p>
                 <p class="matricula">Matricula:  23448</p>
             </div>
-         </div>
+         </div> -->
 
-         <div class="alunos">
-            <i class="fas fa-user-circle"></i>
-            <div class="privacidade">
-                <p class="name">Henrique Juliano de Souza</p>
-                <p class="email">Email: henrique@senai.com</p>
-                <p class="matricula">Matricula:  23448</p>
-            </div>
-         </div>
-         <div class="alunos">
-            <i class="fas fa-user-circle"></i>
-            <div class="privacidade">
-                <p class="name">Henrique Juliano de Souza</p>
-                <p class="email">Email: henrique@senai.com</p>
-                <p class="matricula">Matricula:  23448</p>
-            </div>
-         </div>
-         <div class="alunos">
-            <i class="fas fa-user-circle"></i>
-            <div class="privacidade">
-                <p class="name">Henrique Juliano de Souza</p>
-                <p class="email">Email: henrique@senai.com</p>
-                <p class="matricula">Matricula:  23448</p>
-            </div>
-         </div>
-         <div class="alunos">
-            <i class="fas fa-user-circle"></i>
-            <div class="privacidade">
-                <p class="name">Henrique Juliano de Souza</p>
-                <p class="email">Email: henrique@senai.com</p>
-                <p class="matricula">Matricula:  23448</p>
-            </div>
-         </div>
-         <div class="alunos">
-            <i class="fas fa-user-circle"></i>
-            <div class="privacidade">
-                <p class="name">Henrique Juliano de Souza</p>
-                <p class="email">Email: henrique@senai.com</p>
-                <p class="matricula">Matricula:  23448</p>
-            </div>
-         </div>
+
+      
     </main>
     
 </body>

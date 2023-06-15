@@ -19,5 +19,28 @@ const fetchData = async (url) => {
     return fetchData(url);
   };
 
+  export const getStudentsByClassAndRegistration = async (className, registration) => {
+    const url = `https://mecanica-api.cyclic.app/v1/senai/matriculas?turma=${className}&semestre=${registration}`;
+    return fetchData(url);
+  };
+
+  export const getStudentsByName = async (className, registration, name) => {
+    const url = `https://mecanica-api.cyclic.app/v1/senai/matriculas?turma=${className}&semestre=${registration}&nome=${name}`;
+    return fetchData(url);
+  };
+
+  export const getStudentAvaliacao = async(numberMatricula) =>{
+    const url = `https://mecanica-api.cyclic.app/v1/senai/avaliacoes?matricula=${numberMatricula}`;
+    return fetchData(url);
+  }
+
+  console.log(getStudentsByName('ma','3_semestre','Mike '));
+  
+
+  
+
+
+
+
 
 

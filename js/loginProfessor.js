@@ -42,7 +42,6 @@ export async function renderValidationProfessor() {
 
             validate.professor.forEach(getProfessor => {
                 localStorage.setItem('nomeProfessor', getProfessor.nome)
-                console.log( localStorage.getItem('nomeProfessor'));
                 if (getProfessor.email === email && getProfessor.senha === password) {
                   isAuthenticated = true;
                 }

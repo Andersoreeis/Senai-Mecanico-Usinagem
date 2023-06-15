@@ -14,7 +14,8 @@ export async function renderValidationStudant() {
   const passwordInput = document.getElementById('password-input-aluno');
 
   btnEnterAluno.addEventListener('click', async function() {
-    if(emailInput.value.includes("'") || passwordInput.value.incluedes("'")){
+    console.log(passwordInput.value);
+    if(emailInput.value.includes("'") || passwordInput.value.includes("'")){
       emailInput.value = emailInput.value.replace(/'/g, "");
       passwordInput.value = passwordInput.value.replace(/'/g, "");
       console.log('aspas removida')
