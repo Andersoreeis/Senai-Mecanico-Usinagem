@@ -135,7 +135,10 @@ main {
 }
 
 
-foro
+form{
+    display: flex;
+    gap: 25px;
+}
 
 .input-text-nome-projeto {
     width: 90%;
