@@ -67,6 +67,32 @@ const criarCardAvaliacao = (criterio) => {
 
         const pergunta = document.createElement('p')
         pergunta.textContent = 'Meta atingida?'
+
+        const form = document.createElement('form')
+        
+        const option1 = document.createElement('label')
+        option1.textContent = 'Sim'
+        const inputSim = document.createElement('input')
+        inputSim.classList.add('inputs')
+        inputSim.type = 'radio'
+        inputSim.name = 'options'
+        inputSim.type = 'option1'
+
+        const option2 = document.createElement('label')
+        option2.textContent = 'Não'
+        const inputNao = document.createElement('input')
+        inputSim.classList.add('inputs')
+        inputSim.type = 'radio'
+        inputSim.name = 'options'
+        inputSim.type = 'option2'
+
+        resposta.append(objetivo, inputResultado, metas)
+        metas.append(pergunta, form)
+        form.append(option1, option2)
+        option1.append(inputSim)
+        option2.append(inputNao)
+
+        card.appendChild(resposta)
     });
   
     return card
