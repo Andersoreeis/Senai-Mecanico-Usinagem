@@ -167,6 +167,8 @@ form{
 }
 
 .submite {
+    position: relative;
+    right: 20%;
     width: 105px;
     display: flex;
     align-items: center;
