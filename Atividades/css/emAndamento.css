@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #EC1C24;
+    --secondary-color: #808080;
+    --terciary-color: #FFFFFF;
+    --quartary-color: #F16C71;
+    --gray-black: #4F4F4F;
+    --black-color: #000;
+    --gray-transparent-color: #444;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.back-turmas{
+    display: none;
+}
+

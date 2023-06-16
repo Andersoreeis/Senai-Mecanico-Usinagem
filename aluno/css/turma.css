@@ -109,6 +109,11 @@ img{
 }
 
 @media screen and (max-width:500px){
+
+    body{
+        display: flex;
+        justify-content: center;
+    }
     
     .container{
         width: 70%;
@@ -127,13 +132,14 @@ img{
     }
 
     .titulo-turmas{
-        position: relative;
-        left: 6.063rem;
+        display: flex;
+        padding-left: 55px;
     }
 
     .container-cards-turmas{
         width: 100%;
         display: flex;
+        padding-left: 55px;
     }
 
     .back-turmas{
@@ -141,7 +147,7 @@ img{
         display: flex;
         position: relative;
         top: 20px;
-        left: 20px;
+        left: -13px;
         font-size: 1.563rem;
         text-decoration: none;
         color: var(--secondary-color); 

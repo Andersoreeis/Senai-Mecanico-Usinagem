@@ -1,7 +1,9 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
 }
 
 :root {
@@ -18,247 +20,220 @@
     --card-aluno-color: #D13C42;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.back-turmas{
+.back-turmas {
     display: none;
 }
 
-main{
-    width: 100%;
-    height: 92%;
+.add-inputs-value {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 75px;
+    flex-direction: row;
+    gap: 20px;
+    cursor: pointer;
+
 }
 
-.title{
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+}
+
+.nome-atividade {
     width: 50%;
-    height: 73px;
+    height: 200px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #FFFFFF;
+    background: var(--terciary-color);
     border-top: 8px solid #EC1C24;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
-.input-title{
-    outline: none;
-    border: none;
-    border-bottom:0.5px solid var(--secondary-color);
+.input-text-nome-projeto {
     width: 90%;
-    height: 25px;
-    font-size: 1.25rem;
-    font-family: 'Inter';
-    font-weight: 500;
-    color: var(--black-color);
-}
-
-.input-title[type="text"] {
-    color: var(--black-color); /* Cor vermelha */
-    font-weight: bold; /* Texto em negrito */
-    font-size: 20px; /* Tamanho da fonte */
-}
-
-.input-title::placeholder {
-    color: var(--black-color); /* Cor vermelha */
-}
-
-.container{
-
-    width: 50%;
-    height: 100vh;
+    height: 28px;
     display: flex;
-    flex-direction: column;
-    gap: 17px;
-}
-
-.questions{
-    width: 100%;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    top: 30px;
-    background: #FFFFFF;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-
-.your-question{
-    width: 80%;
-    height: 31px;
-    position: relative;
-    right: 75px;
-    top: 15px;
     outline: none;
     border: none;
-    border-bottom:0.5px solid var(--secondary-color);
-    font-size: 1.25rem;
-    font-family: 'Inter';
-    font-weight: 500;
-    color: #808080;
-}
-
-.value{
-    position: relative;
-    width: 50%;
-    top: 17.88%;
-    right: 36.67%;
-    font-size: 1.25rem;
-    text-align: center;
-    font-family: 'Inter';
-    font-weight: 500;
+    border-bottom: 0.5px solid var(--secondary-color);
     color: var(--secondary-color);
-    opacity: 0.8;
+    font-size: 1.35rem;
+
 }
 
-.value-desirable{
-    width: 78px;
+.input-text-nome-projeto::placeholder {
+    color: var(--black-color);
+    /* Cor Preta */
+}
+
+.container-criterio {
+    width: 50%;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.insert-question {
+    width: 100%;
+    font-size: 1.15rem;
+    outline: none;
+    border: none;
+    padding: 5px;
+    border-bottom: 0.5px solid var(--secondary-color);
+}
+
+.container-insert-value {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: var(--secondary-color);
+}
+
+.input-value {
+    width: 44px;
     height: 23px;
+    font-size: 0.688rem;
+    text-align: center;
+    background: #EAEAEA;
     border-radius: 5px;
     outline: none;
     border: none;
-    text-align: center;
-    position: relative;
-    background: #EAEAEA;
-    top: 22%;
-    left: -44%;
 }
 
-.value-desirable[type="number"]::-webkit-inner-spin-button,
-.value-desirable[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.inputs {
+    background-color: #D9D9D9;
 }
 
-.opcao1{
-    position: absolute;
-    top: 76.88%;
-    right: 90%;
-}
-
-
-form{
+.container-select-yes-or-no-criterio>form {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 222px;
-    position: absolute;
-    top: 81.5%;
-    right: 75%;
-}
-
-.input2{
-    position: relative;
-    left: 55px;
-}
-
-.input3{
-    position: relative;
-    left: 60px;
-}
-
-.opcao1{
-    position: relative;
-    left: 5px;
-}
-
-label{
-    text-align: center;
-    font-size: 0.688rem;
-    font-family: 'Inter';
-    font-weight: 500;
+    gap: 40px;
     color: var(--secondary-color);
+
 }
 
-.adc-criterio{
-    width: 100px;
-    height: 25px;
-}
-
-.circulo2{
+.container-submit-addcriterio {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    top: 20px;
-    right: 38%;
-    gap: 5px;
-}
-
-.circulo{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    position: relative;
-    top: -9%;
-    gap: 5px;
-}
-
-.icon-plus{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1rem;
-    color: var(--secondary-color);
-    text-decoration: none;
-    border: 1px solid #888888;
-    width: 20px;
-    height: 20px;
-    border-radius: 20px;
-    
-}
-
-.icon-plus2{
-    text-decoration: none;
-    border-radius: 15px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid #888888;
-    color: var(--secondary-color);
-    z-index: 99;
-}
-
-.text{
-    width: 175px;
-    font-weight: 500;
-    font-family: 'Inter';
-    font-size: 0.813rem;
-    color: var(--secondary-color);
-    
-}
-
-.button-enviar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    bottom: 60px;
-    left: 20%;
-    background-color: var(--quartary-color);
-    width: 105px;
-    height: 34px;
-    border-radius: 25px;
-}
-
-.to-send{
     width: 100%;
     height: 100%;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    padding: 30px;
+}
+
+.add-criterio {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.submite {
+    width: 105px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 25px ;
-    text-decoration: none;
+    padding: 10px;
+    background-color: var(--card-aluno-color);
     color: var(--terciary-color);
+    border-radius: 20px;
+    cursor: pointer;
 }
 
+.btn-more {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    border-radius: 50%;
+    border: solid var(--secondary-color, 1px);
+}
 
+.container-js {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.delete-button {
+    background-color: white;
+    color: var(--gray-black);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #f2f2f2;
+  }
+
+@media screen and (max-width:500px) {
+
+    .back-turmas{
+        display: flex;
+        position: absolute;
+        top: 1.75%;
+        right: 88.06%;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1.563rem;
+    }
+
+    .nome-atividade {
+        width: 122%;
+    }
+
+    .container-criterio {
+        width: 122%;
+        padding: 30px;
+    }
+
+    .container-select-yes-or-no-criterio>form {
+        width: 145%;
+        display: flex;
+        gap: 14px;
+    }
+
+    .container-submit-addcriterio {
+        width: 100%;
+        padding: 0px;
+    }
+
+    .add-criterio {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .text-adc {
+        width: 200px;
+    }
+}
