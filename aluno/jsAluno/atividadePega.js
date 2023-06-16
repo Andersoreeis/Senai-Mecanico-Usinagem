@@ -54,6 +54,19 @@ const criarCardAvaliacao = (criterio) => {
         resposta.classList.add('container-response')
 
         const objetivo = document.createElement('p')
+        objetivo.classList.add('desejavel')
+        objetivo.textContent = `Desejado: ${resultado.resultado_desejado}`
+
+        const inputResultado = document.createElement('input')
+        inputResultado.classList.add('result')
+        inputResultado.type = 'Text'
+        inputResultado.placeholder = 'Digite o Resultado'
+
+        const metas = document.createElement('div')
+        metas.classList.add('metas')
+
+        const pergunta = document.createElement('p')
+        pergunta.textContent = 'Meta atingida?'
     });
   
     return card

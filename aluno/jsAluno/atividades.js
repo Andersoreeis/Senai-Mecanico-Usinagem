@@ -4,7 +4,7 @@ import { getStudentAvaliacao } from '../../js/api.js'
 
 const jsonavaliacoes = await getStudentAvaliacao(localStorage.getItem('matricula'))
 
-const criarCardAvaliacao = (criterios) => {
+const criarCardAvaliacao = (avaliacao) => {
     const card = document.createElement('a')
     card.classList.add('activities')
     card.href = '../html/atividadePega.html'
@@ -23,7 +23,7 @@ const criarCardAvaliacao = (criterios) => {
 
     card.append(textActivities)
     textActivities.append(aFazer, title)
-  
+
     return card
 }
 
