@@ -67,7 +67,7 @@ main{
 
 .name-student{
     color: var(--terciary-color);
-    font-size: 0.75rem;
+    font-size: 1.25rem;
     font-weight: 600;
     font-family: 'Inter';
     position: relative;

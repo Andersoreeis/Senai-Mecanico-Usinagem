@@ -34,6 +34,11 @@ const fetchData = async (url) => {
     return fetchData(url);
   }
 
+  export const getAvaliacaoById = async(idAvaliacao) =>{
+    const url = `https://mecanica-api.cyclic.app/v1/senai/avaliacao/${idAvaliacao}`;
+    return fetchData(url);
+  }
+
   console.log(getStudentsByName('ma','3_semestre','Mike '));
   
 

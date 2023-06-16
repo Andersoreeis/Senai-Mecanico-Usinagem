@@ -13,7 +13,7 @@
     --quartary-color: #F16C71;
     --gray-black: #4F4F4F;
     --black-color: #000;
-    --gray-transparent-color: #444;
+    --gray-transparent-color: #555555;
     --default-color: #1967D2;
     --purple-color: #9853CF;
     --green-color: #23C088;
@@ -91,53 +91,82 @@ main {
     padding-top: 30px;
     padding-bottom: 30px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     background: var(--terciary-color);
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    gap: 5px;
 }
 
 .text-red{
     position: relative;
-    right: 41%;
     bottom: 113%;
     color: var(--primary-color);
     font-size: 0.688rem;
     font-weight: 600;
 }
 
+.text-gray{
+    position: relative;
+    bottom: 113%;
+    color: var(--secondary-color);
+    font-size: 0.688rem;
+    font-weight: 600;
+}
+
+
 .text-criterion{
     position: relative;
-    right: 5%;
 }
 
 .desejavel{
     display: flex;
-    position: relative;
-    right: 21%;
+    color: var(--gray-transparent-color);
 }
 
 .result{
-    width: 20%;
+    width: 50%;
     height: 30px;
-    position: relative;
-    right: 15%;
     outline: none;
     border: none;
     border-bottom: 0.5px solid var(--secondary-color);
     color: var(--secondary-color);
 }
 
-.metas{
-    position: relative;
-    right: 22%;
+.metas > p {
+    color: var(--gray-transparent-color);
 }
+
 
 
 form{
     display: flex;
     gap: 25px;
+    color: var(--gray-transparent-color);
+}
+
+.container-criterios{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container-response{
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--terciary-color);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 2%;
 }
 
 .text-gray{
@@ -180,18 +209,6 @@ form{
     cursor: pointer;
 }
 
-.btn-more {
-    width: 25px;
-    height: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--secondary-color);
-    font-size: 1.5rem;
-    border-radius: 50%;
-    border: solid var(--secondary-color, 1px);
-}
-
 .container-js {
     width: 100%;
     display: flex;
@@ -200,22 +217,69 @@ form{
     flex-direction: column;
     gap: 20px;
 }
-.delete-button {
-    background-color: white;
-    color: var(--gray-black);
-    border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .delete-button:hover {
-    background-color: #f2f2f2;
-  }
+.time{
+    width: 40%;
+    padding: 30px;
+        display:flex;
+        gap: 20px;
+        justify-content: center;
+        background: var(--terciary-color);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    }
+
+.criterio{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    gap: 10px;
+}
 
 @media screen and (max-width:500px) {
+    .submite{
+        position: relative;
+        right: 0;
+    }
+    .time > p{
+        font-size: 0.8rem;
+    }
+main{
+    padding: 20px;
+    padding-top: 50px;
+
+}
+    .result{
+        width: 100%;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+    }
+    .nome-atividade2{
+        width: 100%;
+    }
+    .atividade-realizada{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .container-response{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .time{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .text-red{
+        position: relative;
+    right: 21%;
+    bottom: 113%;
+    }
 
     .back-turmas{
         display: flex;
@@ -228,16 +292,16 @@ form{
     }
 
     .nome-atividade {
-        width: 122%;
+        width: 100%;
     }
 
     .container-criterio {
-        width: 122%;
+        width: 100%;
         padding: 30px;
     }
 
     .container-select-yes-or-no-criterio>form {
-        width: 145%;
+        width: 100%;
         display: flex;
         gap: 14px;
     }
@@ -245,6 +309,8 @@ form{
     .container-submit-addcriterio {
         width: 100%;
         padding: 0px;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .add-criterio {
@@ -255,5 +321,8 @@ form{
 
     .text-adc {
         width: 200px;
+    }
+    i{
+        
     }
 }

@@ -2,12 +2,15 @@
 
 import { getStudentAvaliacao } from '../../js/api.js'
 
-const jsonavaliacoes = await getStudentAvaliacao('11567891')
+const jsonavaliacoes = await getStudentAvaliacao(localStorage.getItem('matricula'))
 
-const criarCardAvaliacao = (avaliacao) => {
+const criarCardAvaliacao = (criterios) => {
     const card = document.createElement('a')
     card.classList.add('activities')
     card.href = '../html/atividadePega.html'
+    card.addEventListener('click', () => {
+      localStorage.setItem('avaliacaoID', avaliacao.idAvaliacao)
+    })
     const textActivities = document.createElement('div')
     textActivities.classList.add('text-activities')
     const aFazer = document.createElement('i')
@@ -22,13 +25,11 @@ const criarCardAvaliacao = (avaliacao) => {
     textActivities.append(aFazer, title)
   
     return card
-  }
+}
 
 const loadCards = () => {
     const container = document.getElementById("container")
     const cards = jsonavaliacoes.avaliacaoDisponivel.map(criarCardAvaliacao)
-
-    console.log(cards);
 
     container.replaceChildren(...cards)
   }

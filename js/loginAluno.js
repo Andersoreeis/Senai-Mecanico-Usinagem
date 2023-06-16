@@ -35,10 +35,10 @@ export async function renderValidationStudant() {
 
     if (validate && validate.aluno && Array.isArray(validate.aluno)) {
       let isAuthenticated = false;
+      console.log(validate.aluno[0].nome);
       validate.aluno.forEach(getAlunos => {
         localStorage.setItem('nomeAluno', getAlunos.nome)
-        localStorage.setItem('matricula', getAlunos.nome)
-        console.log( localStorage.getItem('nomeALuno'));
+        localStorage.setItem('matricula', getAlunos.matricula)
         if (getAlunos.email === email && getAlunos.senha_email === password) {
           isAuthenticated = true;
           
