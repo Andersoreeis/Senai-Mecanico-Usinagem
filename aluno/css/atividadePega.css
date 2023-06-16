@@ -140,70 +140,13 @@ form{
     gap: 25px;
 }
 
-.input-text-nome-projeto {
-    width: 90%;
-    height: 28px;
-    display: flex;
-    outline: none;
-    border: none;
-    border-bottom: 0.5px solid var(--secondary-color);
-    color: var(--secondary-color);
-    font-size: 1.35rem;
-
-}
-
-.input-text-nome-projeto::placeholder {
-    color: var(--black-color);
-    /* Cor Preta */
-}
-
-.container-criterio {
-    width: 50%;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-}
-
-.insert-question {
-    width: 100%;
-    font-size: 1.15rem;
-    outline: none;
-    border: none;
-    padding: 5px;
-    border-bottom: 0.5px solid var(--secondary-color);
-}
-
-.container-insert-value {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    color: var(--secondary-color);
-}
-
-.input-value {
-    width: 44px;
-    height: 23px;
+.text-gray{
+    position: relative;
+    right: 41%;
+    bottom: 70%;
+    color: var(--primary-color);
     font-size: 0.688rem;
-    text-align: center;
-    background: #EAEAEA;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-}
-
-.inputs {
-    background-color: #D9D9D9;
-}
-
-.container-select-yes-or-no-criterio>form {
-    display: flex;
-    gap: 40px;
-    color: var(--secondary-color);
-
+    font-weight: 600;
 }
 
 .container-submit-addcriterio {
