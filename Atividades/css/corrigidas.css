@@ -54,7 +54,7 @@ main{
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
-    background-color: var(--blue-color);
+    background-color: var(--secondary-color);
 }
 
 .in-progress{
@@ -87,6 +87,7 @@ main{
     }
 
     .tilte-progress{
+        text-align: center;
         width: 100%;
         font-size: 1.5rem;
     }

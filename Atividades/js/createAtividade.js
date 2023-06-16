@@ -1,22 +1,40 @@
 let optionCounter = 1; // Variável para contar os cards de critério
 
+
+const botao = document.getElementById('add-moreValue')
+
+botao.addEventListener('click', function() {
+  createInputs(document.getElementById('inputValue'));
+})
+const inputValue = document.getElementById('inputValue')
+
+inputValue.addEventListener('input', function() {
+  this.value = this.value.replace(/\D/g, '');
+
+  if (this.value.length > 3) {
+    this.value = this.value.slice(0, 4);
+  }
+});
+
 // Função para criar os inputs de valor dinamicamente
-const createInputs = function() {
-  const addMoreValueBtn = document.getElementById('add-moreValue');
-  const containerInsertValue = document.querySelector('.container-insert-value');
+const createInputs = function(containerInsertValue) {
+  const newInputValue = document.createElement('input');
+  newInputValue.setAttribute('type', 'text');
+  newInputValue.classList.add('input-value');
+  containerInsertValue.appendChild(newInputValue);
 
-  addMoreValueBtn.addEventListener('click', function() {
-    const newInputValue = document.createElement('input');
-    newInputValue.setAttribute('type', 'text');
-    newInputValue.classList.add('input-value');
-
-    containerInsertValue.appendChild(newInputValue);
+  const deleteBtn = document.createElement('button');
+  deleteBtn.classList.add('delete-button');
+  deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+  deleteBtn.addEventListener('click', function() {
+    containerInsertValue.removeChild(newInputValue);
+    containerInsertValue.removeChild(deleteBtn);
   });
+  containerInsertValue.appendChild(deleteBtn);
 };
 
 // Função para criar um novo card de critério
 const createCriterio = function() {
-  createInputs();
   const containerCriterio = document.createElement('div');
   containerCriterio.classList.add('container-criterio');
 
@@ -50,21 +68,10 @@ const createCriterio = function() {
   addMoreValueBtn.classList.add('btn-more');
   addMoreValueBtn.textContent = '+';
   addMoreValueBtn.addEventListener('click', function() {
-    const newInputValue = document.createElement('input');
-    newInputValue.setAttribute('type', 'text');
-    newInputValue.classList.add('input-value');
-    newInputValue.addEventListener('input', function() {
-      this.value = this.value.replace(/\D/g, '');
-
-      if (this.value.length > 3) {
-        this.value = this.value.slice(0, 4);
-      }
-    });
-
-    containerInsertValue.appendChild(newInputValue);
+    createInputs(addInputsValue);
   });
 
-  addInputsValue.append(inputValue, addMoreValueBtn);
+  addInputsValue.append(addMoreValueBtn, inputValue);
 
   const containerSelectCriterio = document.createElement('div');
   containerSelectCriterio.classList.add('container-select-yes-or-no-criterio');
@@ -96,20 +103,29 @@ const createCriterio = function() {
   labelOption2.append(inputOption2, 'Critério Desejado');
 
   form.append(labelOption1, labelOption2);
+
   containerSelectCriterio.appendChild(form);
 
-  containerCriterio.append(inputQuestion, containerInsertValue, textValue, addInputsValue, containerSelectCriterio);
-
-  const containerCriterioWrapper = document.getElementById('container-criterio');
-  containerCriterioWrapper.appendChild(containerCriterio);
+  containerCriterio.append(
+    inputQuestion,
+    containerInsertValue,
+    textValue,
+    addInputsValue,
+    containerSelectCriterio
+  );
 
   optionCounter++;
+
+  const deleteBtn = document.createElement('button');
+  deleteBtn.classList.add('delete-button');
+  deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+  deleteBtn.addEventListener('click', function() {
+    containerCriterio.parentNode.removeChild(containerCriterio);
+  });
+  containerCriterio.appendChild(deleteBtn);
+
+  return containerCriterio; // Retorna o card criado
 };
-
-// Event listener para adicionar um novo card de critério ao clicar no botão "Adicionar outro Critério"
-const addCriterioBtn = document.getElementById('add-criterio');
-addCriterioBtn.addEventListener('click', createCriterio);
-
 
 const validateForm = () => {
   const inputNomeProjeto = document.querySelector('.input-text-nome-projeto');
@@ -149,9 +165,6 @@ const validateForm = () => {
   }
 };
 
-const submite = document.getElementById('submite');
-submite.addEventListener('click', validateForm);
-
 const loadClass = () => {
   const container = document.getElementById('container-criterio');
   const card = createCriterio();
@@ -160,3 +173,6 @@ const loadClass = () => {
 
 const btnAdicionarCriterio = document.getElementById('add-criterio');
 btnAdicionarCriterio.addEventListener('click', loadClass);
+
+const submite = document.getElementById('submite');
+submite.addEventListener('click', validateForm);

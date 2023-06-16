@@ -13,6 +13,7 @@
     --black-color: #000;
     --gray-transparent-color: #444;
     --blue-color: #4473B3;
+    --gree-color: #23C088;
 }
 
 body{
@@ -54,7 +55,7 @@ main{
     justify-content: center;
     flex-direction: column;
     border-radius: 15px;
-    background-color: var(--blue-color);
+    background-color: var(--gree-color);
 }
 
 .in-progress{
@@ -87,6 +88,7 @@ main{
     }
 
     .tilte-progress{
+        text-align: center;
         width: 100%;
         font-size: 1.5rem;
     }

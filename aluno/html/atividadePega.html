@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,50 +8,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/createAtividade.css">
-    <script src="../js/createAtividade.js" type="module" defer></script>
+    <link rel="stylesheet" href="../css/atividadePega.css">
     <title>Atividade</title>
 </head>
-
 <body>
-
     <a href="../html/index.html" class="back-turmas">
         <i class="fas fa-arrow-left"></i>
     </a>
 
     <main>
-        <div class="nome-atividade">
-            <input type="text" class="input-text-nome-projeto" placeholder="Escreva o titulo">
-        </div>
-
-        <div class="container-criterio">
-            <input type="text" placeholder="Insira a pergunta" class="insert-question">
-            <div class="container-insert-value">
-                <p class="text-value">Insira o valor desejado</p>
+        <div class="container-js">
+            <div class="nome-atividade">
+                <h1>Nome do Projeto</h1>
             </div>
-            <div class="add-inputs-value" id="inputValue">
-                <p class="btn-more" id="add-moreValue" title="Adicionar outro campo?">+</p>
-
-                <input type="text" class="input-value" id="inputValue" >
-
+    
+            <div class="nome-atividade2">
+                <h3>nome</h3>
             </div>
+    
+            <div class="atividade-realizada">
+                <p class="text-red">Critério critico</p>
+                <p class="text-criterion">Critério 1</p>
+            </div>
+    
+            <p class="desejavel">Desejado: 140</p>
 
+            <input type="text" placeholder="Digite o Resultado" class="result">
 
-            <div class="container-select-yes-or-no-criterio">
+            <div class="metas">
+                <p>Meta atingida?</p>
                 <form>
                     <label for="option1">
                         <input type="radio" id="option1" name="options" value="option1" class="inputs">
-                        Critério Crítico
+                        Sim
                     </label>
                     <label for="option2">
                         <input type="radio" id="option2" name="options" value="option2" class="inputs">
-                        Critério Desejado
+                        Não
                     </label>
                 </form>
             </div>
         </div>
-
-        <div id="container-criterio" class="container-js"></div>
 
         <div class="container-submit-addcriterio">
             <div class="add-criterio" id="add-criterio">
@@ -64,7 +60,5 @@
             </div>
         </div>
     </main>
-
 </body>
-
 </html>
